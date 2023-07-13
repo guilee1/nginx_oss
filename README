@@ -1,1 +1,7 @@
 It's an nginx module that supports file downloading from China Unicom OSS (compatible with the Amazon S3 protocol).and based on nginx-1.24.0.
+
+The reasons for modifying and adding modules to nginx itself to support OSS file downloading are as follows:
+
+Although China Unicom OSS is compatible with Amazon S3, there are differences in implementation details, especially when using V4 version signature authentication. Please refer to the details in the following link: https://support.cucloud.cn/document/127/572/133.html?id=133&arcid=1819. In the image provided in the link, the third step of signature differs significantly from Amazon S3.
+
+China Unicom OSS only provides SDKs for development languages such as Java, Python, and C#, but does not support a C language SDK. Considering that nginx is widely used as a reverse proxy component, we decided to integrate and develop the functionality into nginx for better performance and support.
