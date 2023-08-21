@@ -1,3 +1,5 @@
+当我们使用OSS代替自研图片服务方案的时候，发现nginx还需要配合java一起才能完成图片的存储与读取。为了简化这些操作提升访问性能，我们对nginx增加了一个OSS支持的模块，并开源供大家使用。目前支持中国联通OSS方案。后续支持电信OSS方案。
+
 It's an nginx module that supports file downloading from China Unicom OSS (compatible with the Amazon S3 protocol).and based on nginx-1.24.0.
 
 The reasons for modifying and adding modules to nginx itself to support OSS file downloading are as follows:
